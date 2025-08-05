@@ -80,3 +80,31 @@ print " \n Extracted elements: ". "@extracted_elements";
 
 # Printing the extracted elements
 print "\n Extracted elements: ".  "@extracted_elements";
+
+
+## SIZE of array 
+
+my @arr = (11, 22, 33, 44, 55, 66);
+
+# Storing the length of array 
+# in variable imp_size
+# implicit scalar context
+my $imp_size = @arr;
+
+# Storing the length of array
+# in variable exp_size
+# explicit scalar context
+my $exp_size = scalar @arr;
+
+print "\n Size of arr(imp_size) $imp_size\n";
+print "\n Size of arr(exp_size) $exp_size";
+
+# to find size of array
+my $size_of_array = @arr;
+
+# to find Maximum index of array
+my $maximum_index = $#arr;
+
+# displaying result
+print "\n\n Maximum Index of the Array: $maximum_index\n";
+print "\n The Size of the Array:  $size_of_array\n";
