@@ -39,6 +39,18 @@ unshift @colors, 400;
 
 print "Colors array == @colors \n";
 
+my @x = ('Java', 'C', 'C++');
+
+# Print the Initial array
+print "\n Original array: @x \n";
+
+# Prints the number of elements
+# returned by unshift
+print "\n No of elements returned by unshift: ", unshift(@x, 'PHP', 'JSP');
+
+# Array after unshift operation
+print "\n Updated array: @x";
+
 # Negative indexing
 
 print "\n access the last elemnt of the array. \n";
@@ -51,3 +63,20 @@ my @array2 = (1,3,5,7);
 my @array3 = (@colors, @array2);
 
 print "\n new array3 == @array3";
+
+## Slicing of array 
+my @array = ('Sachin', 'for', 'Perl');
+
+# Using slicing method
+my @extracted_elements = @array[1, 2];
+
+# Printing the extracted elements
+print " \n Extracted elements: ". "@extracted_elements";
+
+@array = ('Sachin', 'for', 'perl', 'Welcomes', 'You');
+
+# Using range operator for slicing method
+@extracted_elements = @array[1..3];
+
+# Printing the extracted elements
+print "\n Extracted elements: ".  "@extracted_elements";
