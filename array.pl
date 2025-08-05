@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+
 
 my @colors = ("Red","Orange","Yellow");
 
@@ -26,7 +29,7 @@ print " Ele = $ele \n ";
 print "Colors array == @colors \n";
 
 # Shift will remove the element from start of the array.
-$ele1 = shift @colors;
+my $ele1 = shift @colors;
 
 print " Shifted Element = $ele1 \n ";
 print "Colors array == @colors \n";
