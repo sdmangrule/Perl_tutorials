@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+print "Enter your name : ";
+my $name = <STDIN>;
+chomp($name);
+
+print "\n Welcome  $name ";
