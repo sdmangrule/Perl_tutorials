@@ -22,3 +22,7 @@ while ($text =~ /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-z]{2,})/g)
 while ($text =~ /([a-zA-z0-9._]+@[a-zA-z0-9.-]+\.[a-z]{2,})/g){
     print "\n".$1;
 }
+
+while ($text =~ /[a-zA-Z0-9.-_+]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g){
+    #print $1;
+}

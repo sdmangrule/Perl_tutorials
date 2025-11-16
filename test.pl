@@ -1,29 +1,38 @@
-
-
 use strict;
 use warnings;
-use feature 'say';
 
-print "Hello World";
+# Create a hash of arrays
+my %data = (
+    'key1' => [ 'apple', 'banana', 'cherry' ],
+    'key2' => [ 'dog', 'cat', 'bird' ],
+    'key3' => [ 'red', 'green', 'blue' ]
+);
 
-print "\n Enter your age:";
+# Access the array associated with 'key2' and print its elements
+# The array at the "second position" refers to the array associated with 'key2'
+# if we consider a conceptual ordering, or simply a specific key's array.
+# Assuming you want the array referenced by 'key2'.
+my $array_ref = $data{'key2'};
 
-my $age = <STDIN>;
-chomp($age);
+# Dereference the array reference and print its elements
+# The index '1' in @{$array_ref}[1] refers to the second element within that array.
+# If you want to print the *entire* array at the second position in the hash (e.g., 'key2's array),
+# then loop through it or join its elements.
 
-if ($age < 18)
+# To print the entire array associated with 'key2':
+print "Array at 'key2': @{$array_ref}\n";
+
+foreach my $ele (@$array_ref)
 {
-    say "You are not eligible to Vote !";
-}
-else{
-    say " You are eligible to vote";
+    print "\n $ele";
 }
 
-sub factorial
-{
-    my $n = shift;
-    return 1 if $n == 0;
-    return $n * factorial($n-1);
-}
+print "\n\n  $array_ref->[1] ";
 
-print " Factorial of 5 == ".factorial(5);
+# To print the second element *within* the array associated with 'key2':
+print "\n\n Second element in 'key2's array: @{$array_ref}[1]\n";
+
+
+my @arr = (4,5,6);
+
+print " \n $arr[1]";

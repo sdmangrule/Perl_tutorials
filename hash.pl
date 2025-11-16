@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use Data::Dumper;
 
 my %person = (
         "name" => 'sachin',
@@ -13,13 +14,13 @@ print "\n Person NAme == $person{'name'}";
 print "\n Person age == $person{'age'}";
 print "\n Person city == $person{'city'}";
 
-$person{"job"} = "Engineer";
+#$person{"job"} = "Engineer";
 
-print "\n Person job == $person{'job'}" if exists $person{"job"};
+#print "\n Person job == $person{'job'}" if exists $person{"job"};
 
-delete ($person{"job"});
+#delete ($person{"job"});
 
-print "\n Person job == $person{'job'}";
+#print "\n Person job == $person{'job'}";
 
 
 print "\n scalar/count of KEYS == ". keys(%person);
@@ -27,6 +28,23 @@ print "\n scalar/count of KEYS == ". keys(%person);
 while (my ($key, $value) = each (%person)){
 
     print "\n  $key == $value  \n";
+    last;
+}
+
+print "Original ", Dumper \%person;
+
+while (my ($key, $value) = each (%person)){
+
+    $person{$value} = $key;
+    #last;
+}
+
+print "Reversed ", Dumper \%person;
+
+while (my ($key, $value) = each (%person)){
+
+    print "\n  $key == $value  \n";
+    last;
 }
 
 =cut
