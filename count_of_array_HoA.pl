@@ -103,7 +103,7 @@ my %data = (
 );
 
 
-foreach my $k (sort {$hash{$a} <=> $hash{$b}} keys %hash){
+foreach my $k (sort {$hash{$b} <=> $hash{$a}} keys %hash){
 
     print "\n\n $k ==> $hash{$k}";
 }

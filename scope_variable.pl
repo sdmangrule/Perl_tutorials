@@ -20,7 +20,7 @@ sub show_global{
 show_global();
 
 sub counter{
-    my $count = 0;
+    state $count = 0;
     $count++;
     say "Count = $count";
 }
